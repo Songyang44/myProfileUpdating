@@ -36,3 +36,199 @@
     transform: rotate(360deg);
   }
 }
+
+.namecolumn {
+  width: 150px;
+  background-color: #61dafb;
+  font-size: 34px;
+  position: relative;
+  top: 25px;
+  left: 15%;
+}
+
+.navibar {
+  background-color: antiquewhite;
+  position: absolute;
+  right: 10%;
+  top: 50px;
+  border-width: 5px;
+}
+
+.paths {
+  padding: 50px;
+  text-decoration: none;
+}
+
+.paths:hover {
+  color: #61dafb;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* 导航栏的高度 */
+  background-color: #333; /* 导航栏背景颜色 */
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: #fff;
+}
+
+.menu-toggle {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 230px;
+  display: flex;
+  flex-direction: column; /* 设置为列方向 */
+  align-items: center; /* 居中对齐 */
+}
+
+li {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 2px solid;
+}
+
+.text-placeholder {
+  border-radius: 5px;
+  font-size: 18px;
+  transition: font-size 0.3s ease;
+}
+
+li:hover .text-placeholder {
+  font-size: 24px;
+  transition: font-size 1.2s ease;
+}
+
+/* Icon color for each list item */
+li:nth-child(1) .icon-placeholder { border-color: #ff008c; }
+li:nth-child(2) .icon-placeholder { border-color: #d309e1; }
+li:nth-child(3) .icon-placeholder { border-color: #9c1aff; }
+li:nth-child(4) .icon-placeholder { border-color: #7700ff; }
+li:nth-child(5) .icon-placeholder { border-color: #4400ff; }
+
+.fade-enter{
+  opacity: 0;
+}
+.fade-enter-active{
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.fade-exit{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+.links {
+  display: flex;
+  flex-direction: column; /* 改为列方向布局 */
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 75%; /* 导航栏占据整个视口高度 */
+  width: 100px; /* 设置导航栏的宽度 */
+  /* background-color: #16d7c4;  */
+  position: fixed; /* 固定在页面左侧 */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.links a {
+  position: relative;
+  text-align: center;
+  color: rgb(210, 23, 23);
+  text-decoration: none;
+  padding: 10px ;
+  margin-top: 100px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.links a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgb(28, 199, 97);
+  transition: width 1s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+.links a:hover::after {
+  width: 100%; /* 悬停时扩展宽度 */
+  left: 0;
+  transform: translateX(0); /* 调整位置，使下划线从中心向两端延展 */
+}
+
+.links a:hover {
+  
+}
+
+.switch {
+  width: 80px;
+  height: 50px;
+  background-color: rgba(17, 169, 50, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(26, 153, 211);
+  border-radius: 40px;
+}
+.themetext{
+  position: absolute;
+  right: -1050px;
+}
